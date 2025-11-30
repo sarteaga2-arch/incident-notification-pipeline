@@ -5,7 +5,7 @@ import datetime
 # ===============================
 WEBEX_TOKEN = "NzBkMGFkMmUtZjBlMS00YTIwLWI1NmItZDI2OWFlYWJlOTE4MmVhOWRmYzktOTNi_P0A1_bac71010-7484-48b3-b7ce-a267353178c5"
 ROOM_ID = "Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vZmEzNGU3ZTAtY2U0Mi0xMWYwLTliNTctZjUyZWUyMTQ4OTQ3"
-SHEET_URL = "YOUR_APPS_SCRIPT_WEB_APP_URL"
+SHEET_URL = "https://script.google.com/macros/s/AKfycbyIMlKNduv2mmYgwwkNFzqDkHlKAMNYt6y8-z2N2iFlyMBZHwuxJ5d9wOTFBAB_k7-q8g/exec"
 # ===============================
 
 def read_results():
