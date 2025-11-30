@@ -3,7 +3,7 @@ import requests
 import datetime
 
 # ===============================
-WEBEX_TOKEN = "YOUR_WEBEX_BOT_TOKEN"
+WEBEX_TOKEN = "NzBkMGFkMmUtZjBlMS00YTIwLWI1NmItZDI2OWFlYWJlOTE4MmVhOWRmYzktOTNi_P0A1_bac71010-7484-48b3-b7ce-a267353178c5"
 ROOM_ID = "Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vMmYzOGZhOTAtYTdjMy0xMWYwLTg0MGQtOWZlZmM4MmJmYWE4"
 SHEET_URL = "YOUR_APPS_SCRIPT_WEB_APP_URL"
 # ===============================
