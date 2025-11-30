@@ -10,24 +10,31 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'python3 -m pip install --upgrade pip'
-                sh 'python3 -m pip install -r requirements.txt'
+                 sh """
+                 python3 -m venv venv
+                 . venv/bin/activate
+                 pip install --upgrade pip
+                 pip install -r requirements.txt
+                 """
             }
         }
 
         stage('Run tests') {
             steps {
-                // --json-report generates results.json
-                // "|| true" means pipeline continues even if tests fail
-                sh 'pytest --json-report --json-report-file=results.json || true'
+                sh """
+                . venv/bin/activate
+                pytest --json-report --json-report-file=results.json || true
+                """
             }
         }
     }
 
     post {
         always {
-            // Always notify, even if tests fail or error
-            sh 'python3 notify.py || true'
+            sh """
+            . venv/bin/activate || true
+            python3 notify.py || true
+            """
         }
     }
 }
