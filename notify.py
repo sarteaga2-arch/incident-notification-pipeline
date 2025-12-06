@@ -9,7 +9,7 @@ SHEET_URL = "https://script.google.com/macros/s/AKfycbyIMlKNduv2mmYgwwkNFzqDkHlK
 # ===============================
 
 def read_results():
-    """Read pytest JSON results from results.json."""
+    #Read pytest JSON results from results.json.
     try:
         with open("results.json") as f:
             data = json.load(f)
@@ -24,7 +24,7 @@ def read_results():
         return "UNKNOWN", 0, 0
 
 def send_webex(status, passed, failed):
-    """Send a message to Webex space via bot."""
+    #Send a message to Webex space via bot.
     text = (
         f"Build status: {status}\n"
         f"Tests passed: {passed}\n"
@@ -43,7 +43,7 @@ def send_webex(status, passed, failed):
     )
 
 def log_to_sheet(status, passed, failed):
-    """Log build result into Google Sheet via Apps Script webhook."""
+    #Log build result into Google Sheet via Apps Script webhook.
     payload = {
         "status": status,
         "passed": passed,
